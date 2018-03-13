@@ -5,7 +5,7 @@ var ctx = canvas.getContext('2d');
 
 var R = 38, r = 90, d = 90, teta = 0, timer;
 // put the points on the field
-function spiro() {
+function createuimage() {
 	var x = (R-r)*Math.cos(teta) + d*Math.cos((R-r)*teta/r);
 	var y = (R-r)*Math.sin(teta) - d*Math.sin((R-r)*teta/r);
 	teta = teta +0.1;
@@ -13,4 +13,4 @@ function spiro() {
 	timer = setTimeout(spiro, 20);
 	ctx.fillStyle = "red";
 }
-spiro();
+createuimage();
